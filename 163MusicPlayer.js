@@ -22,4 +22,5 @@ function getMusic(){
 function switchSongLists(){
 	if(sl < songs.length) sl++;
 	else sl = 1;
+	getMusic();
 }
