@@ -31,22 +31,22 @@
 
 @font-face {
     font-family: "Cantarell";
-    src: url('./lapis/Cantarell-VF-new.otf');
+    src: url('https://ghproxy.com/https://raw.githubusercontent.com/PanDaoxi/websites/main/lapis/Cantarell-VF-new.otf');
 }
 
 @font-face {
     font-family: "JetBrainsMono";
-    src: url('./lapis/JetBrainsMono-Regular.ttf');
+    src: url('https://ghproxy.com/https://raw.githubusercontent.com/PanDaoxi/websites/main/lapis/JetBrainsMono-Regular.ttf');
 }
 
 @font-face {
     font-family: "SourceHanSerifCN";
-    src: url('./lapis/SourceHanSerifCN-Medium.otf');
+    src: url('https://ghproxy.com/https://raw.githubusercontent.com/PanDaoxi/websites/main/lapis/SourceHanSerifCN-Bold.otf');
 }
 
 @font-face {
     font-family: "SourceHanSerifCN";
-    src: url('./lapis/SourceHanSerifCN-Bold.otf');
+    src: url('https://ghproxy.com/https://raw.githubusercontent.com/PanDaoxi/websites/main/lapis/SourceHanSerifCN-Medium.otf');
     font-weight: bold;
 }
 
