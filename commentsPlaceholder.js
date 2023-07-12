@@ -29,6 +29,7 @@ var texts = [
 	"勇敢滴少年啊快去创造热评",
 	"发条友善的评论见证当下",
 	":( 您的设备出现故障，需要发表一条评论以修复。",
+	"WLAN 连接中……检测到评论输出流量！~",
 ];
 
 document.getElementById("commentsPlaceholder").innerHTML = texts[parseInt(Math.random() * texts.length)];
