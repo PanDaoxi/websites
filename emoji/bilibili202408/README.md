@@ -37,5 +37,32 @@ fetchLocalJson("../media/").then((data) => {
 
 至于是从哪里找到 bilibili 表情的，我是从
 直播间、评论
-的 “标签” 按钮中，找到的。
+的 “标签” 按钮中，开发者工具，HTML 元素中找到的。
+
+div.emoji-wrap 一类的。
 -->
+
+用 python 实现下载到本地。这是源代码：
+
+```python
+# Author:PanDaoxi
+from bs4 import BeautifulSoup
+from requests import get
+emoji_ = """
+获取到的表情包 HTML
+"""
+soup = BeautifulSoup(emoji_, 'html.parser')
+image_dict = {}
+img_tags = soup.find_all('img')
+for img in img_tags:
+    title = img.get('title', '').split("[")[1].split("]")[0]
+    src = img.get('src', '').split("@")[0]
+    if src[0] != "h":
+        src = "https:" + src
+    if title and src:
+        with open(f"folder/{(_:=src.split("/"))[len(_)-1]}", "wb") as f:
+            f.write(get(src).content)
+        image_dict[title] = _[len(_)-1]
+with open("folder/emojiMaps.json", "w", encoding = "utf-8") as f:
+    f.write(str(image_dict))
+```
